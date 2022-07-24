@@ -22,6 +22,15 @@ const mount = (elem) => {
 
 // we want to immediately render our app into that element
 
+if (process.env.NODE_ENV === "development") {
+  const elem = document.querySelector("#dev-products");
+
+  if (elem) {
+    //running in isolation..
+    mount(elem);
+  }
+}
+
 //Context/situation #2..
 
 //we are running this file in development or production
