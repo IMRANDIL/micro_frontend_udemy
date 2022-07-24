@@ -26,4 +26,4 @@ const mount = (elem) => {
 
 //we do not want to immediately ender the app..
 
-export default mount;
+export { mount };
