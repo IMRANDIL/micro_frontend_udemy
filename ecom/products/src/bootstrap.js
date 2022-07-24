@@ -1,14 +1,16 @@
 import faker from "faker";
 
-let products = "";
+const mount = (elem) => {
+  let products = "";
 
-for (let i = 0; i < 5; i++) {
-  const name = faker.commerce.productName();
+  for (let i = 0; i < 5; i++) {
+    const name = faker.commerce.productName();
 
-  products += `<div>${name}</div>`;
-}
+    products += `<div>${name}</div>`;
+  }
 
-document.querySelector("#dev-products").innerHTML = products;
+  elem.innerHTML = products;
+};
 
 //Context/Situation #1
 
@@ -29,3 +31,5 @@ document.querySelector("#dev-products").innerHTML = products;
 //no guarantee that an element with an id of 'dev-products' exits..
 
 //we do not want to immediately ender the app..
+
+export default mount;
